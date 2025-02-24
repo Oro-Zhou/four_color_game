@@ -11,7 +11,7 @@ Chessman=[1,2,3,4,0,0,0,0,0,0,0,0,8,7,6,5]
 
 class fourcolorgame:
     #棋盤、棋子、當前要移動的棋子
-    def __init__(self, board=Board, chessman=Chessman, focus=1):
+    def __init__(self, board=Board, chessman=Chessman, focus=2):
         self.board=board
         self.chessman=chessman
         self.focus=focus
@@ -189,18 +189,4 @@ end_time = time.time()
 print("MCTS 選擇最佳走法:", best_move)
 print(Rate_list)
 print(Time_list)
-
-
-
-
-
-
-# Game=fourcolorgame()
-# Game.print_chessman()
-# print(Game.focus)
-# print(Game.Legal_Action())
-# Game.move_piece(8)
-# Game.print_chessman()
-# print(Game.focus)
-# print(Game.Legal_Action())
-# Game.move_piece(8)
+print(Rate_list[-1],round(sum(Time_list),2))
